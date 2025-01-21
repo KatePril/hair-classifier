@@ -37,6 +37,28 @@ The test directory contains:
 - 34 images of wavy hair
 
 # Models
+
+### model_1
+The `model_1` architecture consists of the input layer, three convolutional layers, each followed by a max pooling layer, flatten layer and two dense layers.
+
+### model_2
+In the `model_2`'s architecture, the architecture of `model_1` was enhanced by a dropout layer, which was added between the dense layers.
+
+### model_3
+In the `model_3`'s architecture, the architecture of `model_2` was enhanced by a batch normalization layer, which was added after the first convolutional layer.
+
+### model_4
+The pre-trained Xception model was used as a base model for `model_4`. The Xception model a convolutional neural network with 71 layers, wich was trained on ImageNet dataset. A global average pooling layer and a dense layer were added to the architecture of the `model_4`.
+
+### model_5
+The pre-trained Xception model was also used as a base model for `model_5`. A global average pooling layer, two dense layers and a dropout layer between the dense layers were added to the architecture of the `model_5`.
+
+### model_6
+The pre-trained ResNet101 model was also used as a base model for `model_6`. The ResNet101 model a convolutional neural network with 101 layers, wich was trained on ImageNet dataset. A global average pooling layer and a dense layer were added to the architecture of the `model_6`.
+
+### model_7
+The pre-trained ResNet101 model was also used as a base model for `model_7`. A global average pooling layer, two dense layers and a dropout layer between the dense layers were added to the architecture of the `model_7`.
+
 ### Evaluation results
 | **Model**  | **Accuracy** | **Loss** |
 | -------- | -------- | ---- |
@@ -47,6 +69,9 @@ The test directory contains:
 | model_5  | 0.672    | 0.756 |
 | model_6  | 0.756   | 2.045  |
 | model_7  | 0.687    | 0.864 |
+
+### The final model
+The `model_6`'s evaluation has shown the highest accuracy score so it was exported to the training script of the final model. The final model was trained on the original data only because additional training on the augmented data has proven to have a negative impact on the model's performance.
 
 # Dependencies installation
 All the necessary dependencies are listed in Pipfile. Install pipenv using the following command:
