@@ -49,6 +49,49 @@ The test directory contains:
 | model_7  | 0.687    | 0.864 |
 
 # Dependencies installation
+All the necessary dependencies are listed in Pipfile. Install pipenv using the following command:
+```bash
+pip install pipenv
+```
+If you want to install all the dependencies, run:
+```bash
+pipenv install
+```
+If you want to install only the production dependencies, run:
+```bash
+pipenv install --ignore-pipfile --deploy
+```
 # Run project locally
+First, clone the project repository
+```bash
+git clone https://github.com/KatePril/admission-prediction.git
+```
+```bash
+cd hair-classifier
+```
+Run the `train.py` script:
+```bash
+python train.py
+```
+If you want to run Flask API deployment locally, type the following commands in the project main directory:
+```bash
+docker build -t <image-name> .
+```
+```bash
+docker run -it --rm -p 9696:9696 <image-name>
+```
+
+If you want to run Gradio app locally, navigate to gradio directory:
+```bash
+cd gradio
+```
+Then, run the commands listed below:
+```bash
+docker build -t <image-name> .
+```
+```bash
+docker run -it --rm -p 7860:7860 <image-name>
+```
+
 # Deployment
 ### Deployment demonstration
