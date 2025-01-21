@@ -1,4 +1,10 @@
 # Problem description
+With a rapid advancements of the machine learning field, it starts to effect every area of their lives.
+
+One of the techonologies that can greatly influence beauty, personal care and fashion industries is a neural network for hair types classification. Such neural network can assist in giving tips for maintaining and styling specific hair types based on the provided photo. It can enhance augmented reality (AR) apps for hairstyle and color simulation based on the user's hair type.
+
+Moreover, the hair-type classifier can become an essential part of applications that help hairstylists recommend suitable cuts or styles based on hair type. Another useful utilization of this neural network is in social media, where it can assist in personalizing beauty or fashion content based on user-identified or inferred hair types.
+
 # Data
 I used [Hair Type Dataset](https://www.kaggle.com/datasets/kavyasreeb/hair-type-dataset) for training models for training and evaluation of the models of this project. This dataset can be downloaded from Kaggle via provided url. The dataset contains both male and female haircuts. Some images include full faces, while others focus specifically on the hair. Some photos are professionally-taken while others are home-taken.
 
