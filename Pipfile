@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "*"
+matplotlib = "*"
+scipy = "*"
+tflite-runtime = {file = "tflite_runtime-2.13.0-cp311-cp311-win_amd64.whl"}
+keras-image-helper = "*"
+gradio = "*"
+flask = "*"
+
+[dev-packages]
+jupyter = "*"
+scikit-learn = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.9"
