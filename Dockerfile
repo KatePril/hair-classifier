@@ -1,14 +1,10 @@
-FROM svizor/zoomcamp-model:3.11.5-slim
+FROM public.ecr.aws/lambda/python:3.10
 
 RUN pip install keras_image_helper
-RUN pip install tflite-runtime
-RUN pip install flask
-RUN pip install gunicorn
-RUN pip install numpy==1.26.4
+RUN pip install  --no-deps https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.14.0-cp310-cp310-linux_x86_64.whl
+RUN pip install numpy==1.21.6
 
 COPY hair-classifier.tflite .
-COPY predict.py .
+COPY lambda_function.py .
 
-EXPOSE 9696
-
-ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
+CMD ["lambda_function.lambda_handler"]
