@@ -150,3 +150,6 @@ Verify the successful creation of container creation in [AWS Console](https://si
 Navigate to Lambda service, click **Create function**, select **Container image**, enter the function name. Then, select the repository you pushed the image to and select the image. you can leave the rest of the settings as default.
 
 ### Deployment demonstration
+
+https://github.com/user-attachments/assets/e90c9467-6fce-4f6e-9b36-c6fa14c14b67
+
